@@ -1,5 +1,8 @@
 { config, pkgs, ... }: 
 
+let
+    unstable = import <unstable> {};
+
 {
   networking.firewall = {
     enable = true;
@@ -60,6 +63,6 @@
   services.unifi = {
     enable = true;
     openFirewall = true;
-    unifiPackage = pkgs.unifi;
+    unifiPackage = unstable.unifi;
   };
 }
