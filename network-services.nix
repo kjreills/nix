@@ -5,8 +5,6 @@ let
 
 in {
 
-  #nixpkgs.config.allowUnfree = true;
-
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [ 
@@ -60,6 +58,11 @@ in {
         };
       };
     };
+  };
+
+  { nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "unifi-controller"
+    ]
   };
 
   # https://help.ui.com/hc/en-us/articles/218506997-UniFi-Ports-Used
