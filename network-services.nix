@@ -5,7 +5,7 @@ let
 
 in {
 
-  unstable.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   networking.firewall = {
     enable = true;
