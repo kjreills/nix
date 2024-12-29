@@ -60,10 +60,9 @@ in {
     };
   };
 
-  { nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "unifi-controller"
-    ]
-  };
+    ];
 
   # https://help.ui.com/hc/en-us/articles/218506997-UniFi-Ports-Used
   services.unifi = {
