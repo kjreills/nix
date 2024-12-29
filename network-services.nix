@@ -4,6 +4,9 @@ let
     unstable = import <unstable> {};
 
 in {
+
+  unstable.config.allowUnfree = true;
+
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [ 
