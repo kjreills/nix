@@ -3,7 +3,7 @@
 let
     unstable = import <unstable> {};
 
-{
+in {
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [ 
