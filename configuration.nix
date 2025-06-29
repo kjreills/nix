@@ -10,6 +10,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       /home/kyle/nix/network-services.nix
+      /home/kyle/nix/file-systems.nix
     ];
 
   # Bootloader.
